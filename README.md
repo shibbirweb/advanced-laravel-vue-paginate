@@ -1,5 +1,5 @@
 
-[![npm](https://img.shields.io/npm/v/advanced-laravel-vue-paginate.svg)](https://www.npmjs.com/package/advanced-laravel-vue-paginate)
+[![npm](https://img.shields.io/npm/v/advanced-laravel-vue-paginate.svg)](https://www.npmjs.com/package/advanced-laravel-vue-paginate) [![Downloads](https://img.shields.io/npm/dt/advanced-laravel-vue-paginate.svg)](https://www.npmjs.com/package/advanced-laravel-vue-paginate)
 
 # Advanced-Laravel-Vue-Paginate
 A advanced, smart, highly customizable vue pagination component for Laravel Pagination
