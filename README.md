@@ -41,7 +41,7 @@ Use the component:
     <li v-for="post in laravelData.data" :key="post.id">{{ post.title }}</li>
 </ul>
 
-<advanced-laravel-vue-paginate :data="laravelData" @paginate-to="getResults"/>
+<advanced-laravel-vue-paginate :data="laravelData" @paginateTo="getResults"/>
 ```
 
 ```javascript
@@ -95,7 +95,7 @@ export default {
 ###Events
 |Name|Return | Description|
 |:---:|:---:|---|
-|`paginate-to`| `Number` | Invoked when user click on a pagination link and return clicked page number|
+|`paginateTo`| `Number` | Invoked when user click on a pagination link and return clicked page number|
 
 
 
