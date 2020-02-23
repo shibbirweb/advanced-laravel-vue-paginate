@@ -1,4 +1,4 @@
-# demo-advanced-laravel-paginator
+# demo-advanced-laravel-paginate
 
 ## Project setup
 ```
