@@ -1,60 +1,46 @@
 <template>
-  <div id="app">
-    <h1>Advanced Laravel Vue Paginator</h1>
-    <ul>
-      <li v-for="(_user, index) in users.data" :key="index">
-        {{ _user.name }}
-      </li>
-    </ul>
-    <nav>
-      <laravel-vue-paginator
-        :data="users"
-        @paginateTo="gotoPage"
-        useStyle="default"
-        :onEachSide="3"
-        :showNextPrev="true"
-      />
-    </nav>
+  <div class="container-fluid" id="app">
+    <div class="row">
+      <!-- Greetings -->
+      <div class="col-md-12">
+        <greetings />
+      </div>
+
+      <div class="col-md-12">
+        <preview />
+      </div>
+
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-4">
+            <options />
+          </div>
+          <div class="col-md-8">
+            <code-preview />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <documentation-processing/>
+      </div>
+    </div>
   </div>
 </template>
 <script>
-import LaravelVuePaginator from "@/components/AdvancedLaravelVuePaginate.vue";
+import Greetings from "@/components/Greetings.vue";
+import Options from "@/components/Options.vue";
+import Preview from "@/components/Preview.vue";
+import CodePreview from "@/components/CodePreview.vue";
+import DocumentationProcessing from "@/components/DocumentationProcessingComponent";
+
 export default {
   name: "App",
   components: {
-    LaravelVuePaginator
-  },
-  data() {
-    return {
-      users: {}
-    };
-  },
-  methods: {
-    gotoPage(pageNumber = 1) {
-      this.$axios
-        .get("users?page=" + pageNumber)
-        .then(response => {
-          this.users = response.data;
-        })
-        .catch(error => console.log(error));
-    }
-  },
-  mounted() {
-    this.gotoPage();
+    DocumentationProcessing,
+    Greetings,
+    Options,
+    Preview,
+    CodePreview
   }
 };
 </script>
-<style lang="scss" scoped>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-ul {
-  list-style: none;
-}
-</style>

@@ -1,22 +1,26 @@
 {
-  "name": "advanced-laravel-vue-paginate",
-  "version": "0.1.1",
+  "name": "demo-advanced-laravel-vue-paginate",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "build-bundle": "vue-cli-service build --target lib ./src/index.js"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "advanced-laravel-vue-paginate": "^0.1.1",
+    "bootstrap": "^4.4.1",
     "core-js": "^3.6.4",
-    "vue": "^2.6.11"
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.1",
+    "vue": "^2.6.11",
+    "vuex": "^3.1.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-service": "~4.2.0",
     "@vue/eslint-config-prettier": "^6.0.0",
-    "axios": "^0.19.2",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.1",
@@ -35,31 +39,5 @@
       "vue-cli-service lint",
       "git add"
     ]
-  },
-  "main": "./dist/advanced-laravel-vue-paginate.common.js",
-  "files": [
-    "dist/*",
-    "src/*",
-    "public/*",
-    "*.json",
-    "*.js"
-  ],
-  "description": "A advanced, smart, highly customizable vue pagination component for Laravel pagination",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shibbirweb/advanced-laravel-vue-paginate.git"
-  },
-  "keywords": [
-    "Laravel",
-    "Vue",
-    "Pagination",
-    "Laravel-Vue-Pagination"
-  ],
-  "author": "MD. Shibbir Ahmed <shibbirweb@gmail.com> (http://shibbir.me/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/shibbirweb/advanced-laravel-vue-paginate/issues",
-    "email": "shibbirweb@gmail.com"
-  },
-  "homepage": "https://github.com/shibbirweb/advanced-laravel-vue-paginate#readme"
+  }
 }
