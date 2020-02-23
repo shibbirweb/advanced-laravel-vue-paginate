@@ -4,6 +4,11 @@
 # Advanced-Laravel-Vue-Paginate
 A advanced, smart, highly customizable vue pagination component for Laravel Pagination
 
+
+## Demo & Playground
+See (https://shibbirweb.github.io/advanced-laravel-vue-paginate/)
+
+
 ## Requirements
 
 * [Vue.js](https://vuejs.org/) 2.x
@@ -21,12 +26,19 @@ Register the component:
 
 ```javascript
 // register as a global Vue component
-require('advanced-laravel-vue-paginate/dist/advanced-laravel-vue-paginate.css')
+import 'advanced-laravel-vue-paginate/dist/advanced-laravel-vue-paginate.css'
 Vue.use(require('advanced-laravel-vue-paginate'));
 
 // or, import as a single Vue component
 import AdvancedLaravelVuePaginate from 'advanced-laravel-vue-paginate';
-require('advanced-laravel-vue-paginate/dist/advanced-laravel-vue-paginate.css')
+import 'advanced-laravel-vue-paginate/dist/advanced-laravel-vue-paginate.css'
+
+// register in vue component
+export default {
+	components: {
+		AdvancedLaravelVuePaginate
+	}
+}
 
 // or, use as a cdn
 <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
