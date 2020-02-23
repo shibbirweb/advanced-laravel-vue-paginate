@@ -6,7 +6,7 @@ A advanced, smart, highly customizable vue pagination component for Laravel Pagi
 
 
 ## Demo & Playground
-See (https://shibbirweb.github.io/advanced-laravel-vue-paginate/)
+See [https://shibbirweb.github.io/advanced-laravel-vue-paginate](https://shibbirweb.github.io/advanced-laravel-vue-paginate/)
 
 
 ## Requirements
