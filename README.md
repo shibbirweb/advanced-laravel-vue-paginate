@@ -39,11 +39,6 @@ export default {
 		AdvancedLaravelVuePaginate
 	}
 }
-
-// or, use as a cdn
-<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-<script src="https://unpkg.com/advanced-laravel-vue-paginate"></script>
-
 ```
 
 Use the component:
@@ -103,6 +98,7 @@ export default {
 |`contentAlignClass` | `String` (optional)| Any `String` value | `justify-content-center` | Content align class|
 |`linkClass` | `String` (optional) |  Any `String` value | `page-link` | Anchor link (`a`) class|
 |`disableClass` | `String` (optional) | Any `String` value | `disabled` | Disable class name|
+| `disableClassIn` | `String` (optional) | <ul><li>`li`</li><li>`a`</li></ul> | `li` | Disable class placement |
 
 
 ###Events

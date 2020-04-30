@@ -11,10 +11,16 @@
   >
     <li
       v-if="showNextPrev"
-      :class="[listItemClass, !hasPrevious ? disableClass : '']"
+      :class="[
+        listItemClass,
+        !hasPrevious ? (disableClassIn === 'li' ? disableClass : '') : ''
+      ]"
     >
       <a
-        :class="[linkClass]"
+        :class="[
+          linkClass,
+          !hasPrevious ? (disableClassIn === 'a' ? disableClass : '') : ''
+        ]"
         href="#"
         @click.prevent="paginateTo(previousPage)"
         >{{ previousText }}</a
@@ -42,11 +48,20 @@
     </li>
     <li
       v-if="showNextPrev"
-      :class="[listItemClass, !hasNext ? disableClass : '']"
+      :class="[
+        listItemClass,
+        !hasNext ? (disableClassIn === 'li' ? disableClass : '') : ''
+      ]"
     >
-      <a :class="[linkClass]" href="#" @click.prevent="paginateTo(nextPage)">{{
-        nextText
-      }}</a>
+      <a
+        :class="[
+          linkClass,
+          !hasNext ? (disableClassIn === 'a' ? disableClass : '') : ''
+        ]"
+        href="#"
+        @click.prevent="paginateTo(nextPage)"
+        >{{ nextText }}</a
+      >
     </li>
   </ul>
 </template>
@@ -127,6 +142,14 @@ export default {
       // disable class
       type: String,
       default: "disabled"
+    },
+    disableClassIn: {
+      // diable class placement
+      type: String,
+      default: "li",
+      validator: value => {
+        return ["li", "a"].indexOf(value) !== -1;
+      }
     },
     previousText: {
       // previous button text
