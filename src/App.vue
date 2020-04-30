@@ -13,6 +13,7 @@
         useStyle="default"
         :onEachSide="3"
         :showNextPrev="true"
+        activeClassIn="li"
       />
     </nav>
   </div>
