@@ -125,6 +125,9 @@ export default {
     }
   },
   computed: {
+    isResourceApi() {
+      return this.data.meta ? true : false;
+    },
     hasPrevious() {
       // has previous page
       return this.currentPage > 1;
@@ -135,7 +138,9 @@ export default {
     },
     currentPage() {
       // current page
-      return this.data.current_page;
+      return this.isResourceApi
+        ? this.data.meta.current_page
+        : this.data.current_page;
     },
     nextPage() {
       // next page number
@@ -147,7 +152,9 @@ export default {
     },
     totalPage() {
       // total pages
-      return this.data.last_page;
+      return this.isResourceApi
+        ? this.data.meta.last_page
+        : this.data.last_page;
     },
     pages() {
       // if less
