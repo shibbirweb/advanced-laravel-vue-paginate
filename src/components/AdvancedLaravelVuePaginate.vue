@@ -247,6 +247,10 @@ export default {
       return content == this.dots ? true : false;
     },
     paginateTo(pageNumber) {
+      // if page number is not valid
+      if (pageNumber < 1 || pageNumber > this.totalPage) {
+        return;
+      }
       // goto page
       this.$emit("paginateTo", pageNumber);
     }
