@@ -25,11 +25,18 @@
       :key="index"
       :class="[
         listItemClass,
-        isActive(_page) ? activeClass : '',
+        activeClassIn === 'li' ? (isActive(_page) ? activeClass : '') : '',
         isDot(_page) ? disableClass : ''
       ]"
     >
-      <a :class="[linkClass]" href="#" @click.prevent="paginateTo(_page)">
+      <a
+        :class="[
+          linkClass,
+          activeClassIn === 'a' ? (isActive(_page) ? activeClass : '') : ''
+        ]"
+        href="#"
+        @click.prevent="paginateTo(_page)"
+      >
         {{ _page }}
       </a>
     </li>
@@ -87,6 +94,14 @@ export default {
       // pagination active class
       type: String,
       default: "active"
+    },
+    activeClassIn: {
+      // active class placement
+      type: String,
+      default: "li",
+      validator: value => {
+        return ["li", "a"].indexOf(value) !== -1;
+      }
     },
     listClass: {
       // list (ul) class

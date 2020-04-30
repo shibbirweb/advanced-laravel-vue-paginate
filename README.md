@@ -97,6 +97,7 @@ export default {
 |`useStyle` | `String` (optional) | <ul><li>`default`</li><li>`bootstrap`</li><li>`custom`</li></ul> | `default` | <ul><li>`default` for default component style.</li><li>`bootstrap` for bootstrap style (required [Bootstrap](https://getbootstrap.com/)).</li><li>`custom` for custom style. Use &#8601; below  props to style as you want.</li></ul>|
 |`alignment`| String (optional) | <ul><li>`null`</li><li>`left`</li><li>`center`</li><li>`right`</li></li></ul> | `null` | Custom alignment of pagination. `null` for default style, `left` for align to left, `center` for align to center, `right` for align to right |
 | `activeClass` | `String` (optional) | Any `String` value | `active` | Class for current pagination page |
+| `activeClassIn` | `String` (optional) | <ul><li>`li`</li><li>`a`</li></ul> | `li` | Active class placement |
 |`listClass` | `String` (optional) | Any `String` value | `pagination` | List (`ul`) class|
 |`listItemClass` | `String` (optional) | Any `String` value | `page-item` | Class for List item (`li`)|
 |`contentAlignClass` | `String` (optional)| Any `String` value | `justify-content-center` | Content align class|
