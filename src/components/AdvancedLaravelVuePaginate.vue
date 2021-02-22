@@ -177,7 +177,7 @@ export default {
       }
 
       // if total page = 1. then depends on user props value
-      return this.totalPage === 1 ? this.autoHidePaginate : true;
+      return this.totalPage === 1 ? !this.autoHidePaginate : true;
     },
     isResourceApi() {
       return this.data.meta ? true : false;
