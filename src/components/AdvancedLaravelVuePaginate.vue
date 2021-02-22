@@ -1,6 +1,6 @@
 <template>
   <ul
-    v-if="data.data"
+    v-if="shouldShowPaginate"
     :class="[
       ,
       useStyle === 'default' ? 'default-style' : '',
@@ -144,7 +144,7 @@ export default {
       default: "disabled"
     },
     disableClassIn: {
-      // diable class placement
+      // disable class placement
       type: String,
       default: "li",
       validator: value => {
@@ -160,9 +160,25 @@ export default {
       // next  button text
       type: String,
       default: "Next"
+    },
+    autoHidePaginate: {
+      // auto hide paginate if has not more then one page
+      type: Boolean,
+      default: true
     }
   },
   computed: {
+    shouldShowPaginate() {
+      // if auto hide paginator
+
+      // if has not data hide paginate
+      if (!this.data.data) {
+        return false;
+      }
+
+      // if total page = 1. then depends on user props value
+      return this.totalPage === 1 ? this.autoHidePaginate : true;
+    },
     isResourceApi() {
       return this.data.meta ? true : false;
     },

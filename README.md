@@ -99,6 +99,7 @@ export default {
 |`linkClass` | `String` (optional) |  Any `String` value | `page-link` | Anchor link (`a`) class|
 |`disableClass` | `String` (optional) | Any `String` value | `disabled` | Disable class name|
 | `disableClassIn` | `String` (optional) | <ul><li>`li`</li><li>`a`</li></ul> | `li` | Disable class placement |
+| `autoHidePaginate` | `Boolean` (optional) | <ul><li>`true`</li><li>`false`</li></ul> | `true` | Auto hide paginator if has not more than one page |
 
 
 ###Events
