@@ -11,7 +11,7 @@ See [https://shibbirweb.github.io/advanced-laravel-vue-paginate](https://shibbir
 
 ## Requirements
 
-* [Vue.js](https://vuejs.org/) 2.x
+* [Vue.js](https://vuejs.org/) 2.x or higher
 * [Laravel](http://laravel.com/docs/) 5.x or higher
 
 ## Install
@@ -102,7 +102,7 @@ export default {
 | `autoHidePaginate` | `Boolean` (optional) | <ul><li>`true`</li><li>`false`</li></ul> | `true` | Auto hide paginator if has not more than one page |
 
 
-###Events
+### Events
 |Name|Return | Description|
 |:---:|:---:|---|
 |`paginateTo`| `Number` | Invoked when user click on a pagination link and return clicked page number|
