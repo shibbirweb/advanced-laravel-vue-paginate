@@ -346,56 +346,50 @@ export default defineComponent({
   </ul>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .default-style {
   display: flex;
   padding-left: 0;
   list-style: none;
   border-radius: 0.25rem;
+}
 
-  &.default-center {
-    justify-content: center !important;
-  }
+.default-style.default-center {
+  justify-content: center !important;
+}
 
-  &.default-left {
-    justify-content: flex-start !important;
-  }
+.default-style.default-left {
+  justify-content: flex-start !important;
+}
 
-  &.default-right {
-    justify-content: flex-end !important;
-  }
+.default-style.default-right {
+  justify-content: flex-end !important;
+}
 
-  li {
-    a {
-      position: relative;
-      display: block;
-      padding: 0.5rem 0.75rem;
-      margin-left: -1px;
-      line-height: 1.25;
-      color: #007bff;
-      background-color: #fff;
-      border: 1px solid #dee2e6;
-      text-decoration: none;
-    }
+.default-style li a {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #007bff;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  text-decoration: none;
+}
 
-    &.active {
-      a {
-        z-index: 3;
-        color: #fff;
-        background-color: #007bff;
-        border-color: #007bff;
-      }
-    }
+.default-style li.active a {
+  z-index: 3;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
 
-    &.disabled {
-      a {
-        color: #6c757d;
-        pointer-events: none;
-        cursor: auto;
-        background-color: #fff;
-        border-color: #dee2e6;
-      }
-    }
-  }
+.default-style li.disabled a {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: auto;
+  background-color: #fff;
+  border-color: #dee2e6;
 }
 </style>
